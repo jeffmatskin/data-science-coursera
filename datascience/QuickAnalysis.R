@@ -8,7 +8,7 @@ get_exchanges <- function(files){
 get_currencies <- function(files){
   posns <- gregexpr('_', files)
   curr1 <- vector(mode = "integer", length = length(files))
-  curr2 <- vector(mode = "integer", length = length(files))
+  #curr2 <- vector(mode = "integer", length = length(files))
   for (i in seq_along(posns)){
     curr1[i] <- substr(files[i],posns[[i]][1]+1, posns[[i]][2]-1)
     #removed bc all vs USD
